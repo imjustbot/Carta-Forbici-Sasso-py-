@@ -1,5 +1,3 @@
 import random
-
-
-MOSSE = ["Sasso", "Carta", "Forbice"]
+import streamlit as st
 
