@@ -1,1 +1,1 @@
-# Carta-Forbici-Sasso-py-
+Carta forbici sasso fatto da me con python
