@@ -9,44 +9,48 @@ MOSSE = ["CARTA", "FORBICI", "SASSO"]
 
 st.title("CARTA, FORBICI, SASSO")
 
-mossa_utente = st.selectbox("SCEGLI LA TUA RISPOSTA:", MOSSE)
+mossa_utente = st.selectbox("SCEGLI LA TUA RISPOSTA:", MOSSE, index=None, placeholder="Scegli una mossa...", key="mossa_utente")
 
-mossa_computer = random.choice(MOSSE)
 
-st.write(f"Il computer ha scelto {mossa_computer}")
+if mossa_utente:
+
+    
+    mossa_computer = random.choice(MOSSE)
+
+    st.write(f"Il computer ha scelto {mossa_computer}")
 
 # VITTORIE DELL'UTENTE:
 
-if mossa_utente == "CARTA" and mossa_computer == "SASSO":
+    if mossa_utente == "CARTA" and mossa_computer == "SASSO":
 
-    st.write(WPLAYER)
+        st.write(WPLAYER)
 
-elif mossa_utente == "SASSO" and mossa_computer == "FORBICI":
+    elif mossa_utente == "SASSO" and mossa_computer == "FORBICI":
 
-    st.write(WPLAYER)
+        st.write(WPLAYER)
 
-elif mossa_utente == "FORBICI" and mossa_computer == "CARTA":
+    elif mossa_utente == "FORBICI" and mossa_computer == "CARTA":
 
-    st.write(WPLAYER)
+        st.write(WPLAYER)
 
 # VITTORIE DEL PC:
 
-elif mossa_utente == "SASSO" and mossa_computer == "CARTA":
+    elif mossa_utente == "SASSO" and mossa_computer == "CARTA":
 
-    st.write(WPC)
+        st.write(WPC)
 
-elif mossa_utente == "FORBICI" and mossa_computer == "SASSO":
+    elif mossa_utente == "FORBICI" and mossa_computer == "SASSO":
 
-    st.write(WPC)
+        st.write(WPC)
 
-elif mossa_utente == "CARTA" and mossa_computer == "FORBICI":
+    elif mossa_utente == "CARTA" and mossa_computer == "FORBICI":
 
-    st.write(WPC)
+        st.write(WPC)
 
 # IL PAREGGIO:
 
-else:
+    else:
 
-    st.write("Pareggio!")
+        st.write("Pareggio!")
 
 
